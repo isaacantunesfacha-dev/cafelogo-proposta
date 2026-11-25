@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'none';" />
+  <title>Cafélogo · Proposta de Evolução</title>
+  <meta name="description" content="Proposta de evolução de SEO, front-end sensorial, identidade e relacionamento para o Cafélogo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #F5EFE6;
+      --white: #FBF8F3;
+      --ink: #381C18;
+      --ink-soft: #5C3A34;
+      --mustard: #D4A843;
+      --hl: #EFE1B8;
+      --beet: #8A3343;
+      --line: rgba(56, 28, 24, 0.14);
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --hand: 'Caveat', cursive;
+      --mono: 'Space Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    @media (pointer: fine) {
+      body {
+        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cellipse cx='12' cy='12' rx='6.5' ry='9.5' transform='rotate(-25 12 12)' fill='%23381C18' stroke='%23F5EFE6' stroke-width='1.2'/%3E%3Cpath d='M9.2 4.8C11.8 9.2 12.2 14.8 14.8 19.2' stroke='%23D4A843' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") 12 12, auto;
+      }
+      a, button {
+        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cellipse cx='13' cy='13' rx='7' ry='10' transform='rotate(-25 13 13)' fill='%238A3343' stroke='%23F5EFE6' stroke-width='1.4'/%3E%3Cpath d='M10 5.5C12.8 10 13.2 16 16 20.5' stroke='%23D4A843' stroke-width='1.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") 13 13, pointer;
+      }
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .header-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    main section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    main section:last-of-type {
+      border-bottom: none;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--sans);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.14;
+      color: var(--ink);
+    }
+
+    h1 { font-size: clamp(1.95rem, 6vw, 3rem); margin-bottom: 18px; }
+    h2 { font-size: clamp(1.45rem, 4.4vw, 2rem); margin-bottom: 14px; }
+    h3 { font-size: 1.04rem; margin-bottom: 6px; }
+
+    p {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    mark {
+      background: var(--hl);
+      color: var(--ink);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    code {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      background: rgba(56, 28, 24, 0.06);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .hand {
+      font-family: var(--hand);
+      font-size: 1.45rem;
+      line-height: 1.1;
+      color: var(--beet);
+    }
+
+    .mono-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .logo-card {
+      background: var(--mustard);
+      border: 1px solid var(--ink);
+      border-radius: 14px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .logo-card img {
+      width: 126px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      animation: steamFloat 4.5s ease-in-out infinite;
+    }
+
+    .logo-card .hand {
+      color: var(--ink);
+      margin-top: 10px;
+      display: block;
+    }
+
+    @keyframes steamFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .queries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .query-pill {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 13px;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink);
+    }
+
+    .ruled-note {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-top: 20px;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 27px,
+        rgba(56, 28, 24, 0.07) 27px,
+        rgba(56, 28, 24, 0.07) 28px
+      );
+      box-shadow: 0 8px 20px rgba(56, 28, 24, 0.05);
+    }
+
+    .ruled-note p {
+      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 28px;
+      margin-top: 6px;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0 0;
+    }
+
+    .swatch {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swatch-bar { height: 44px; }
+
+    .swatch-txt {
+      padding: 8px 10px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .home-concept {
+      margin-top: 24px;
+      background: #EAD7C0;
+      border: 1px solid var(--ink);
+      border-radius: 14px;
+      padding: 36px 22px 28px;
+      text-align: center;
+    }
+
+    .home-concept-art {
+      max-width: 240px;
+      margin: 0 auto 18px;
+    }
+
+    .home-concept-art svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .steam-path {
+      animation: steamRise 3.8s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .steam-path:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    @keyframes steamRise {
+      0%, 100% { transform: translateY(0) scaleY(1); opacity: 0.92; }
+      50% { transform: translateY(-4px) scaleY(1.04); opacity: 1; }
+    }
+
+    .home-concept-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .home-search-mock {
+      max-width: 420px;
+      margin: 0 auto 12px;
+      background: var(--white);
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 11px 18px;
+      text-align: left;
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .home-pills-mock {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .home-pills-mock span {
+      font-size: 0.76rem;
+      color: var(--ink);
+      background: rgba(251, 248, 243, 0.72);
+      border: 1px solid rgba(56, 28, 24, 0.22);
+      border-radius: 999px;
+      padding: 4px 11px;
+    }
+
+    .home-concept-cap {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+    }
+
+    .newsletter-showcase {
+      margin-top: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .newsletter-showcase img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(56, 28, 24, 0.09);
+    }
+
+    .newsletter-showcase figcaption {
+      margin-top: 12px;
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      color: var(--ink-soft);
+    }
+
+    .scope-grid {
+      list-style: none;
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .scope-grid li {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .scope-optional {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      background: rgba(251, 248, 243, 0.55);
+    }
+
+    .cadence-bar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 18px;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 12px;
+    }
+
+    .cadence-bar span {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--mustard);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cadence-bar p {
+      color: var(--paper);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    .sign-block {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sign-name {
+      font-family: var(--hand);
+      font-size: 2rem;
+      color: var(--ink);
+      display: block;
+      margin-top: 8px;
+    }
+
+    footer {
+      padding: 28px 0 48px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (min-width: 720px) {
+      .wrap { padding: 0 28px; }
+      main section { padding: 62px 0; }
+      .hero { flex-direction: row; align-items: center; gap: 36px; }
+      .hero > div:first-child { flex: 1.35; }
+      .logo-card { flex: 0.65; }
+      .palette { grid-template-columns: repeat(4, 1fr); }
+      .scope-grid { grid-template-columns: 1fr 1fr; }
+      .cadence-bar { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body { background: var(--paper); }
+      main section { padding: 32px 0; break-inside: avoid; }
+      .newsletter-showcase, .home-concept, .ruled-note, .cadence-bar { break-inside: avoid; }
+      .steam-path, .logo-card img { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span>cafélogo</span>
+      <span class="header-meta">Para Gabriel Ávila e Gabriel Uchôa</span>
+    </header>
+
+    <main>
+      <section>
+        <div class="hero">
+          <div>
+            <span class="mono-label">cafelogo.com.br</span>
+            <h1>Vocês já têm os dados.<br />Agora falta <mark>aparecer no Google</mark> e segurar quem chega.</h1>
+            <p>
+              Hoje o Cafélogo organiza 93 cafés de 13 marcas brasileiras por notas sensoriais. O próximo passo é usar essa base para ganhar espaço em buscas orgânicas, dar um rosto mais quente ao site e transformar visitantes ocasionais em leitores recorrentes.
+            </p>
+          </div>
+          <div class="logo-card">
+            <img src="assets/logo-cafelogo.svg" alt="Estudo de marca do Cafélogo" />
+            <span class="hand">estudo do novo símbolo</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <span class="mono-label">Google · Cauda longa</span>
+        <h2>Ganhar nas buscas específicas em vez de brigar por termos genéricos.</h2>
+        <p>
+          Disputar "café especial" no Google é brigar com grandes marketplaces. Na cauda longa, a concorrência cai e a intenção de compra sobe. Quem gosta de café pesquisa exatamente a nota ou o método que quer provar:
+        </p>
+
+        <div class="queries">
+          <span class="query-pill">"café especial nota de chocolate amargo"</span>
+          <span class="query-pill">"café frutado brasileiro para V60"</span>
+          <span class="query-pill">"café com notas florais onde comprar"</span>
+        </div>
+
+        <div class="ruled-note">
+          <span class="hand">Na prática</span>
+          <p>
+            Cada nota sensorial e cada marca pode virar uma página própria indexável (como <code>/notas/frutados</code>). Adicionando dados estruturados de produto e avaliação, aumentamos a chance de exibir estrelas direto nos resultados do Google, o que costuma elevar a taxa de clique.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <span class="mono-label">Identidade · Front-end sensorial</span>
+        <h2>Trazer o clima de cafeteria sem pesar o celular.</h2>
+        <p>
+          Quem entra no site precisa sentir o clima de café logo nos primeiros segundos. Fundo claro de papel, o novo símbolo do copo com vapor sutil na entrada e a busca por notas aberta na primeira tela, mantendo o carregamento rápido no mobile.
+        </p>
+
+        <div class="palette">
+          <div class="swatch">
+            <div class="swatch-bar" style="background:#D4A843;"></div>
+            <div class="swatch-txt">Spicy Mustard<br />#D4A843</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-bar" style="background:#381C18;"></div>
+            <div class="swatch-txt">Bitter Chocolate<br />#381C18</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-bar" style="background:#8A3343;"></div>
+            <div class="swatch-txt">Beet Red<br />#8A3343</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-bar" style="background:#F5EFE6;"></div>
+            <div class="swatch-txt">Papel Creme<br />#F5EFE6</div>
+          </div>
+        </div>
+
+        <figure class="home-concept">
+          <div class="home-concept-art" aria-hidden="true">
+            <svg viewBox="0 0 260 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="steam-path" d="M104 42C98 30 112 22 106 10" stroke="#381C18" stroke-width="5.5" stroke-linecap="round"/>
+              <path class="steam-path" d="M124 38C118 24 134 16 127 4" stroke="#381C18" stroke-width="6.5" stroke-linecap="round"/>
+              <path d="M74 58H160V92C160 107 148 118 133 118H101C86 118 74 107 74 92V58Z" fill="#381C18"/>
+              <path d="M160 66H172C182 66 188 73 188 82C188 91 182 98 172 98H160" stroke="#381C18" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="117" cy="87" r="14" fill="#EAD7C0"/>
+              <circle cx="117" cy="87" r="6" fill="#381C18"/>
+              <path d="M24 118H236" stroke="#381C18" stroke-width="4.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="home-concept-title">Ache seu próximo café pelas notas.</div>
+          <div class="home-search-mock">
+            <span>Buscar nota, torrefação ou método...</span>
+            <span style="font-family:var(--mono); font-size:0.75rem; color:var(--ink);">93 cafés</span>
+          </div>
+          <div class="home-pills-mock">
+            <span>Achocolatados</span>
+            <span>Frutados</span>
+            <span>Florais</span>
+            <span>Castanhas</span>
+          </div>
+          <figcaption class="home-concept-cap">Estudo da nova entrada · silhueta minimalista em espaço negativo</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <span class="mono-label">Relacionamento · Base própria</span>
+        <h2>Quem chega pelo Google e fecha a aba não volta sozinho.</h2>
+        <p>
+          Uma newsletter simples de boas-vindas apresentando vocês dois e recomendando cafés por nota sensorial transforma tráfego pontual em base própria.
+        </p>
+
+        <figure class="newsletter-showcase">
+          <img src="assets/newsletter-preview.png" alt="Exemplo visual da primeira edição da newsletter do Cafélogo" loading="lazy" />
+          <figcaption>Exemplo da edição de boas-vindas · identidade aplicada</figcaption>
+        </figure>
+
+        <div class="ruled-note">
+          <span class="hand">Onde entra o dinheiro</span>
+          <p>
+            Uma newsletter com <mark>5 mil leitores qualificados</mark> já abre espaço comercial concreto: torrefações pagam por destaque editorial na edição, cupons exclusivos ou selo de apoiador dentro do catálogo.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <span class="mono-label">Escopo e formato</span>
+        <h2>Foco no núcleo que gera resultado primeiro.</h2>
+        <p>
+          Para manter o projeto enxuto e mensurável, a proposta separa o núcleo essencial de entregas complementares que podem entrar depois.
+        </p>
+
+        <ul class="scope-grid">
+          <li>
+            <span class="mono-label" style="color:var(--beet); margin-bottom:4px;">Núcleo · 01</span>
+            <h3>SEO de cauda longa</h3>
+            <p>URLs indexáveis por nota sensorial e marca, meta tags dinâmicas e dados estruturados.</p>
+          </li>
+          <li>
+            <span class="mono-label" style="color:var(--beet); margin-bottom:4px;">Núcleo · 02</span>
+            <h3>Identidade e front-end</h3>
+            <p>Aplicação do novo símbolo, paleta editorial e ajustes na entrada do site com foco em celular.</p>
+          </li>
+          <li>
+            <span class="mono-label" style="color:var(--beet); margin-bottom:4px;">Núcleo · 03</span>
+            <h3>Newsletter de boas-vindas</h3>
+            <p>Template pronto para disparo apresentando os fundadores e direcionando cliques de volta ao catálogo.</p>
+          </li>
+          <li>
+            <span class="mono-label" style="color:var(--beet); margin-bottom:4px;">Núcleo · 04</span>
+            <h3>Base para apoiadores</h3>
+            <p>Estrutura inicial para capturar e-mails no site e apresentar a audiência a torrefações parceiras.</p>
+          </li>
+        </ul>
+
+        <div class="scope-optional">
+          <span class="mono-label" style="margin-bottom:6px;">Opcionais para uma segunda fase</span>
+          <p style="font-size:0.93rem;">
+            <strong>Playlist colaborativa de cafeteria</strong> (para aumentar tempo na página) e <strong>Push notifications</strong> (avisos curtos quando entram novos rótulos). Ficam fora do núcleo inicial para não inflar o escopo.
+          </p>
+        </div>
+
+        <div class="cadence-bar">
+          <div>
+            <span>Prazo estimado</span>
+            <p>Projeto de 4 a 6 semanas, com entregas quinzenais.</p>
+          </div>
+          <div>
+            <span>Investimento</span>
+            <p>Definido sob medida após alinharmos quais módulos entram agora.</p>
+          </div>
+        </div>
+
+        <div class="sign-block">
+          <p>
+            Antes de fechar qualquer número, quero ouvir o que faz mais sentido para o momento do Cafélogo. Se fizer sentido para vocês, marcamos uma conversa rápida para escolher por onde começar.
+          </p>
+          <span class="sign-name">vamos tomar um café?</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>cafelogo.com.br</span>
+      <span>Proposta de evolução digital</span>
+    </footer>
+  </div>
+</body>
+</html>
